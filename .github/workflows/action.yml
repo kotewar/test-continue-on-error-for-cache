@@ -16,7 +16,7 @@ jobs:
       run: |
         pwd
         npm install
-    - uses: kotewar/cache/restore@v3
+    - uses: kotewar/cache/restore@be3863f944c1e4b6ef5f117ac57d5f919222ea43
       id: cache
       with:
         path: ${{ github.workspace }}/node_modules
