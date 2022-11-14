@@ -22,4 +22,3 @@ jobs:
         path: ${{ github.workspace }}/node_modules
         key: cache-key
         restore-keys: ${{ steps.date.outputs.date }}
-        skip-save: 'no'
