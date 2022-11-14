@@ -26,3 +26,5 @@ jobs:
       with:
         path: ${{ github.workspace }}/node_modules
         key: cache-key-1
+    - uses: kotewar/python-github-action@main
+
