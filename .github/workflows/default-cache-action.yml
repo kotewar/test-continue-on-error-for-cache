@@ -16,8 +16,8 @@ jobs:
       id: cache
       with:
         path: ${{ github.workspace }}/node_modules
-        key: cache-key-1
-        restore-keys: ${{ steps.date.outputs.date }}
+        key: cache-key-2
+        restore-keys: cache-key-
     - name: NPM install
       run: |
         pwd
