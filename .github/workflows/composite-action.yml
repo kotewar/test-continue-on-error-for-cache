@@ -1,13 +1,12 @@
 name: Test composite actions working
 on:
-  push:
+  # push:
   workflow_dispatch:
 
 jobs:
   build:
     name: Build Test
-    runs-on:  ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
-    - uses: kotewar/composite-actions-cache@main
-    - uses: kotewar/python-github-action@main
-
+      - uses: kotewar/composite-actions-cache@main
+      - uses: kotewar/python-github-action@main
