@@ -16,8 +16,8 @@ jobs:
       id: cache
       with:
         path: ${{ github.workspace }}/node_modules
-        key: cache-key-2
-        restore-keys: cache-key-
+        key: kotewar-cache-key-2
+        restore-keys: kotewar-cache-key
     - name: NPM install
       run: |
         pwd
