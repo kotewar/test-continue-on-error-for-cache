@@ -1,4 +1,4 @@
-name: Test Compression
+name: Test composite actions working
 on:
   push:
   workflow_dispatch:
