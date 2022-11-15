@@ -1,6 +1,6 @@
 name: Skip restore, only save
 on:
-  push:
+  # push:
   workflow_dispatch:
 
 jobs:

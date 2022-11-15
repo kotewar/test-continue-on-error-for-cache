@@ -17,9 +17,10 @@ jobs:
         id: cache-restore
         with:
           path: ${{ github.workspace }}/node_modules
-          key: cache-key
+          key: key-not-present
       - name: NPM install
         shell: bash
+        if: steps.cache-restore.outputs.cache-hit != 'true'
         run: |
           pwd
           npm install
