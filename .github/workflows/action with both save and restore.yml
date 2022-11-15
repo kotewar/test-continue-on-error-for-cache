@@ -1,6 +1,6 @@
 name: Save and restore
 on:
-  # push:
+  push:
   workflow_dispatch:
 
 jobs:
@@ -19,7 +19,7 @@ jobs:
           path: ${{ github.workspace }}/node_modules
           key: cache-key-doesnot-exist
           restore-keys: |
-            cache-key-date
+            cache-key-doesnot-
       - name: NPM install
         shell: bash
         run: |
