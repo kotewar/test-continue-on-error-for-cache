@@ -1,4 +1,4 @@
-name: Skip save, only restore
+name: Save and restore
 on:
   push:
   workflow_dispatch:
