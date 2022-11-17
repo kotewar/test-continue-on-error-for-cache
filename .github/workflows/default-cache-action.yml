@@ -24,3 +24,6 @@ jobs:
         run: |
           pwd
           npm install
+      - name: error step
+        shell: bash
+        run: exit 1
