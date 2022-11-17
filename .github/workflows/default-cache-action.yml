@@ -27,3 +27,8 @@ jobs:
         id: error-job
         run: exit 1
         continue-on-error: true
+      - name: check failure
+        if: failure()
+        shell: bash
+        run: |
+          echo "The job failed"
