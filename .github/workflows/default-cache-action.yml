@@ -1,6 +1,6 @@
 name: Default workflow
 on:
-  push:
+#   push:
   workflow_dispatch:
 jobs:
   build:
