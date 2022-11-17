@@ -1,6 +1,6 @@
 name: Default workflow
 on:
-  # push:
+  push:
   workflow_dispatch:
 jobs:
   build:
@@ -26,9 +26,4 @@ jobs:
       - name: Induce error
         id: error-job
         run: exit 1
-        continue-on-error: true
-      - name: check failure
-        if: failure()
-        shell: bash
-        run: |
-          echo "The job failed"
+
