@@ -1,6 +1,6 @@
 name: Default workflow
 on:
-#   push:
+  push:
   workflow_dispatch:
 jobs:
   build:
@@ -16,7 +16,7 @@ jobs:
         id: cache
         with:
           path: ${{ github.workspace }}/node_modules
-          key: kotewar-cache-key-4
+          key: kotewar-cache-key-5
           restore-keys: kotewar-cache-key
           strict-restore: true
       - name: NPM install
