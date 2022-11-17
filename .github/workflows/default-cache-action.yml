@@ -24,7 +24,3 @@ jobs:
         run: |
           pwd
           npm install
-      - name: Induce error
-        id: error-job
-        run: exit 1
-
