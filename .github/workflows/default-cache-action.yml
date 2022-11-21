@@ -30,5 +30,5 @@ jobs:
           echo "$STATE_SAVE_CACHE"
           echo "$STATE_CACHE_RESULT"
           echo "$STATE_CACHE_HIT"
-          echo $STATE_CACHE_KEY"
+          echo "$STATE_CACHE_KEY"
           exit 1
