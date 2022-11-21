@@ -26,4 +26,7 @@ jobs:
           npm install
       - name: error step
         shell: bash
-        run: exit 1
+        run: |
+          echo "$STATE_SAVE_CACHE"
+          echo "$env.STATE_SAVE_CACHE"
+          exit 1
