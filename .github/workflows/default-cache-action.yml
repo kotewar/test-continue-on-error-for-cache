@@ -29,3 +29,8 @@ jobs:
         run: |
           echo "$test"
           exit 0
+      - name: Test
+        shell: bash
+        run: |
+          echo "hello"
+        if: env.STATE_SAVE_CACHE == 'kotewar-cache-key-5'
