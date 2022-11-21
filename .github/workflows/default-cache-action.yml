@@ -31,4 +31,8 @@ jobs:
           echo "$STATE_CACHE_RESULT"
           echo "$STATE_CACHE_HIT"
           echo "$STATE_CACHE_KEY"
+          echo env.STATE_SAVE_CACHE
+          echo env.STATE_CACHE_RESULT
+          echo $env.STATE_CACHE_HIT
+          echo "$env.STATE_CACHE_KEY"
           exit 1
