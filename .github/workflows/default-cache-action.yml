@@ -18,7 +18,7 @@ jobs:
           path: ${{ github.workspace }}/node_modules
           key: kotewar-cache-key-5
           restore-keys: kotewar-cache-key
-          saveCacheOnAnyFailure: yes
+          saveCacheOnAnyFailure: 'yes'
       - name: NPM install
         if: steps.cache-restore.outputs.cache-hit != 'true'
         run: |
@@ -32,5 +32,5 @@ jobs:
       - name: Test
         shell: bash
         run: |
-          echo "hello"
-        if: env.STATE_CACHE_KEY == 'kotewar-cache-key-5'
+          echo env
+          echo $env
