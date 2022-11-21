@@ -33,4 +33,4 @@ jobs:
         shell: bash
         run: |
           echo "hello"
-        if: env.STATE_SAVE_CACHE == 'kotewar-cache-key-5'
+        if: env.STATE_CACHE_KEY == 'kotewar-cache-key-5'
