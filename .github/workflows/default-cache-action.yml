@@ -19,7 +19,7 @@ jobs:
           key: kotewar-cache-key-5
           restore-keys: kotewar-cache-key
         env:
-          GHA_CACHE_SAVE: 'always'
+          GHA_CACHE_SAVE: 'never'
       - name: NPM install
         if: steps.cache-restore.outputs.cache-hit != 'true'
         run: |
