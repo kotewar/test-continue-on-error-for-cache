@@ -19,6 +19,8 @@ jobs:
           key: kotewar-cache-key-5
           restore-keys: kotewar-cache-key
           save-cache-on-any-failure: 'yes'
+        env:
+          test: 'yes'
       - name: NPM install
         if: steps.cache-restore.outputs.cache-hit != 'true'
         run: |
@@ -35,4 +37,5 @@ jobs:
           echo env.STATE_CACHE_RESULT
           echo $env.STATE_CACHE_HIT
           echo "$env.STATE_CACHE_KEY"
+          echo "$env.test"
           exit 1
