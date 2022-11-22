@@ -30,8 +30,3 @@ jobs:
         run: |
           echo "$test"
           exit 1
-      - name: Test
-        shell: bash
-        run: |
-          echo env
-          echo $env
