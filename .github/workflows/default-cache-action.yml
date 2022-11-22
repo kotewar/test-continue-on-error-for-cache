@@ -27,5 +27,5 @@ jobs:
       - name: error step
         shell: bash
         run: |
-          echo "$GITHUB_ENV"
+          echo $GITHUB_ENV
           exit 1
