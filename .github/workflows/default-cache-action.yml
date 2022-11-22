@@ -28,4 +28,5 @@ jobs:
         shell: bash
         run: |
           echo $GITHUB_ENV
+          cat $GITHUB_ENV
           exit 1
