@@ -29,3 +29,7 @@ jobs:
           echo $GITHUB_ENV
           cat $GITHUB_ENV
           exit 1
+      - name: always
+        if: always()
+        run: |
+          echo "I run always"
