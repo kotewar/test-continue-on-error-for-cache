@@ -11,7 +11,7 @@ jobs:
       - name: Get current date
         shell: bash
         id: date
-        run: echo "::set-output name=date::$(date +'%Y-%m-%dT%H:%M:%S')"
+        run: echo "date=$(date +'%Y-%m-%dT%H:%M:%S')" >> $GITHUB_OUTPUT
       - uses: actions/checkout@v2
       - uses: actions/cache/restore@700-actionscache-granular-cache-control
         id: cache-restore
