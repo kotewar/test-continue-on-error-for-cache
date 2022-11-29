@@ -1,6 +1,6 @@
 name: Default workflow
 on:
-  # push:
+  push:
   workflow_dispatch:
 jobs:
   build:
@@ -28,7 +28,7 @@ jobs:
         run: |
           echo $GITHUB_ENV
           cat $GITHUB_ENV
-          exit 1
+          exit 0
       - name: always
         if: always()
         run: |
