@@ -19,6 +19,7 @@ jobs:
           path: ${{ github.workspace }}/node_modules
           key: key-not-present
           restore-keys: cache-key
+          save-on-failure: true
       - name: NPM install
         shell: bash
         if: steps.cache-restore.outputs.cache-hit != 'true'
