@@ -13,7 +13,7 @@ jobs:
         id: date
         run: echo "::set-output name=date::$(date +'%Y-%m-%dT%H:%M:%S')"
       - uses: actions/checkout@v2
-      - uses: actions/cache/restore@abddc4dd44970f07c8173b1e739d0d1a2503566b
+      - uses: actions/cache/restore@dddd7ce07c7945e4e3a29b4e772bd5d4145e6a09
         id: cache-restore
         with:
           path: ${{ github.workspace }}/node_modules
