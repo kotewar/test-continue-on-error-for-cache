@@ -16,13 +16,12 @@ jobs:
         id: cache
         with:
           path: ${{ github.workspace }}/node_modules
-          key: kotewar-cache-key-5
+          key: kotewar-cache-key-6
           restore-keys: kotewar-cache-key
       - name: NPM install
         if: steps.cache-restore.outputs.cache-hit != 'true'
         run: |
-          pwd
-          npm install
+          exit 1
       - name: error step
         shell: bash
         run: |
