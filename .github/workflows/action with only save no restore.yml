@@ -17,7 +17,7 @@ jobs:
         run: |
           pwd
           npm install
-      - uses: kotewar/cache/save@700-actionscache-granular-cache-control
+      - uses: actions/cache/save@700-actionscache-granular-cache-control
         id: cache-save
         with:
           path: ${{ github.workspace }}/node_modules
