@@ -1,4 +1,3 @@
-name: Default workflow
 on:
   push:
   workflow_dispatch:
