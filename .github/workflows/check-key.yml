@@ -27,8 +27,8 @@ jobs:
           do
               if [ $cacheKey == $KEY ]
               then
-                export KEY_FOUND="true"
-                echo "KEY_FOUND: $KEY_FOUND"
+                echo "KEY_FOUND=true" >> $GITHUB_OUTPUT
+                echo "KEY FOUND"
                 break
               fi
           done
@@ -38,7 +38,7 @@ jobs:
           
       - name: Condition
         id: check
-        if: ${{env.KEY_FOUND == 'true' }}
+        if: ${{steps.key.outputs.KEY_FOUND == 'true' }}
         run: |
           echo "Key found :D"
         
