@@ -22,6 +22,23 @@ jobs:
           cacheKeysForPR=$(gh actions-cache list -R $REPO -B $BRANCH --key $KEY | cut -f 1 )
           
           echo "Checking if key exists"
-          echo $cacheKeysForPR
+          
+          for cacheKey in $cacheKeysForPR
+          do
+              if [ $cacheKey == $KEY ]
+              then
+                export KEY_FOUND=true
+                echo "KEY_FOUND: $KEY_FOUND"
+                break
+              fi
+          done
+          echo "Done"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Condition
+        id: check
+        if: process.env['KEY_FOUND'] == true
+        run: |
+          echo "Key found :D"
+        
