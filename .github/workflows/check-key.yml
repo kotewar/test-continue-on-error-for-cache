@@ -15,9 +15,9 @@ jobs:
           gh extension install actions/gh-actions-cache
           REPO=${{ github.repository }}
           BRANCH=${{ github.ref }}
-          KEY= "node"
+          KEY= "cache"
           echo "Fetching list of cache key"
-          cacheKeysForPR=$(gh actions-cache list -R $REPO -B $BRANCH --key ${KEY} | cut -f 1 )
+          cacheKeysForPR=$(gh actions-cache list -R $REPO -B $BRANCH --key $KEY | cut -f 1 )
           
           echo "Checking if key exists"
           echo $cacheKeysForPR
