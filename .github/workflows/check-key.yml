@@ -38,7 +38,7 @@ jobs:
           
       - name: Condition
         id: check
-        if: process.env['KEY_FOUND'] == true
+        if: $KEY_FOUND' == true
         run: |
           echo "Key found :D"
         
