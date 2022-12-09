@@ -27,7 +27,7 @@ jobs:
           do
               if [ $cacheKey == $KEY ]
               then
-                export KEY_FOUND=true
+                export KEY_FOUND="true"
                 echo "KEY_FOUND: $KEY_FOUND"
                 break
               fi
@@ -38,7 +38,7 @@ jobs:
           
       - name: Condition
         id: check
-        if: $KEY_FOUND' == true
+        if: $KEY_FOUND' == "true"
         run: |
           echo "Key found :D"
         
