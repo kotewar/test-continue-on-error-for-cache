@@ -17,7 +17,7 @@ jobs:
         id: cache-restore
         with:
           path: ${{ github.workspace }}/node_modules
-          key: key-not-present
+          key: kotewar-cache-key-5
           restore-keys: restore-key-not-present
       - name: NPM install
         shell: bash
