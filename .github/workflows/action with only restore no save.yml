@@ -18,7 +18,7 @@ jobs:
         with:
           path: ${{ github.workspace }}/node_modules
           key: key-not-present
-          restore-keys: cache-key
+          restore-keys: restore-key-not-present
       - name: NPM install
         shell: bash
         if: steps.cache-restore.outputs.cache-hit != 'true'
