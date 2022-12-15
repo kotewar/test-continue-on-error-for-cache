@@ -1,6 +1,6 @@
 name: Restore only
 on:
-  # push:
+  push:
   workflow_dispatch:
 
 jobs:
@@ -13,7 +13,7 @@ jobs:
         id: date
         run: echo "date=$(date +'%Y-%m-%dT%H:%M:%S')" >> $GITHUB_OUTPUT
       - uses: actions/checkout@v2
-      - uses: actions/cache/restore@700-actionscache-granular-cache-control
+      - uses: actions/cache/restore@v3.2.0-beta.1
         id: cache-restore
         with:
           path: ${{ github.workspace }}/node_modules
