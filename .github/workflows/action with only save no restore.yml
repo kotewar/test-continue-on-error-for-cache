@@ -17,7 +17,7 @@ jobs:
         run: |
           pwd
           npm install
-      - uses: actions/cache/save@700-actionscache-granular-cache-control
+      - uses: actions/cache/save@v3.2.0-beta.1
         id: cache-save
         with:
           path: ${{ github.workspace }}/node_modules
