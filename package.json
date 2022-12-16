@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/kotewar/private-user-repo#readme",
   "dependencies": {
+    "moment": "^2.29.4",
     "uuid": "^8.3.2"
   }
 }
