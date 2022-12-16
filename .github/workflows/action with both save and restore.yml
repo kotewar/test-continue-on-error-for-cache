@@ -1,6 +1,6 @@
 name: Save and restore
 on:
-  # push:
+  push:
   workflow_dispatch:
 
 jobs:
