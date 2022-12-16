@@ -18,7 +18,7 @@ jobs:
           npm install
     - uses: actions/cache@v3.1.0-beta
       with:
-        path: ${{ github.workspace }}/node_modules
+        path: node_modules
         key: ${{ matrix.os }}-runner-${{ github.run_number }}-${{ github.run_attempt }}
 
   restore:
@@ -34,7 +34,7 @@ jobs:
     - uses: actions/cache@v3.1.0-beta
       id: cache
       with:
-        path: ${{ github.workspace }}/node_modules
+        path: node_modules
         key: ${{ matrix.key }}-runner-${{ github.run_number }}-${{ github.run_attempt }}
 
     - name: Fail if cache not found
