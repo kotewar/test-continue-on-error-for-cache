@@ -16,7 +16,9 @@ jobs:
     - name: NPM install
       shell: bash
       run: |
-          npm install
+          npm config set unsafe-perm true
+          npm cache clean
+          npm install --no-bin-links
     - uses: actions/cache@v3.1.0-beta
       with:
         path: node_modules
