@@ -1,6 +1,6 @@
 name: Restore only
 on:
-  push:
+  # push:
   workflow_dispatch:
 
 jobs:
