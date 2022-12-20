@@ -7,10 +7,6 @@ jobs:
     name: Build Test
     runs-on: ubuntu-latest
     steps:
-      - name: Get current date
-        shell: bash
-        id: date
-        run: echo "::set-output name=date::$(date +'%Y-%m-%dT%H:%M:%S')"
       - uses: actions/checkout@v2
       - name: NPM install
         shell: bash
