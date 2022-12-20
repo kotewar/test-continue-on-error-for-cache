@@ -1,7 +1,7 @@
 name: Cross OS
 
 on:
-  push:
+#  push:
   workflow_dispatch:
 
 jobs:
