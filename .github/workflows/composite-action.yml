@@ -1,6 +1,6 @@
 name: Test composite actions working
 on:
-  # push:
+  push:
   workflow_dispatch:
 
 jobs:
