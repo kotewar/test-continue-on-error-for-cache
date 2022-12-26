@@ -13,7 +13,7 @@ jobs:
         run: |
           pwd
           npm install
-      - uses: actions/cache/save@kotewar/save-warnings
+      - uses: actions/cache/save@v3
         id: cache-save
         with:
           path: ${{ github.workspace }}/node_modules
